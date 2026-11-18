@@ -6,5 +6,7 @@
 .marker-text[data-highlight] .marker-ink { stroke-width:.55em; stroke-linecap:butt; }
 .marker-text[data-visible] .marker-reveal { animation:marker-draw 720ms cubic-bezier(.37,.02,.22,1) var(--marker-delay) both; }
 .marker-text[data-highlight] .marker-reveal { stroke-width:48; stroke-linecap:butt; }
+.marker-text[data-visible] .marker-ink { animation:marker-finish 0s calc(var(--marker-delay) + 720ms) forwards; }
+@keyframes marker-finish { to { mask:none; } }
 @keyframes marker-draw { from { stroke-dashoffset:1; opacity:0; } 1% { opacity:1; } to { stroke-dashoffset:0; opacity:1; } }
-@media(prefers-reduced-motion:reduce) { .marker-text[data-visible] .marker-reveal { animation:none; stroke-dashoffset:0; opacity:1; } }
+@media(prefers-reduced-motion:reduce) { .marker-text[data-visible] .marker-ink { animation:none; mask:none; } .marker-text[data-visible] .marker-reveal { animation:none; stroke-dashoffset:0; opacity:1; } }
