@@ -15,7 +15,7 @@ export const markerStyles = Object.keys(strokes) as MarkerStyle[];
 
 type Props = { children: ReactNode; variant?: MarkerStyle; color?: string; delay?: number };
 
-export function MarkerText({ children, variant = 'Underline', color = '#f1784d', delay = 0 }: Props) {
+export function MarkerText({ children, variant = 'Underline', color = '#FF46C4', delay = 0 }: Props) {
   const maskId = useId();
   const ref = useRef<HTMLSpanElement>(null);
   const [visible, setVisible] = useState(false);

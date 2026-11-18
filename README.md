@@ -10,7 +10,7 @@ Copy MarkerText.tsx and marker-text.css into the same directory in your React pr
 import { MarkerText } from './MarkerText';
 
 export function Note() {
-  return <p>Keep the <MarkerText variant="Circle" color="#f1784d">good parts</MarkerText>.</p>;
+  return <p>Keep the <MarkerText variant="Circle" color="#FF46C4">good parts</MarkerText>.</p>;
 }
 ```
 
